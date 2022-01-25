@@ -1,0 +1,28 @@
+.footer {
+  background: #000;
+}
+.social span {
+  color: #fff;
+}
+.icons {
+  border-radius: 50px;
+  color: #000 !important;
+  background: white;
+  font-size: 26px !important;
+  padding: 3px;
+  margin-right: 10px;
+  margin-left: 14px;
+  cursor: pointer;
+}
+.footerContent p {
+  color: #fff;
+}
+.footerContent h6 {
+  color: #cfb022;
+}
+.footerContent a {
+  text-decoration: none;
+}
+.bottomBar {
+  color: #000 !important;
+}

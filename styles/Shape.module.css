@@ -1,0 +1,25 @@
+/* shape */
+.shape1 {
+  background: #ebe9e9;
+}
+.customShapeDividerBottom1642607723 {
+  /* position: absolute; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.customShapeDividerBottom1642607723 svg {
+  position: relative;
+  display: block;
+  width: calc(200% + 1.3px);
+  height: 228px;
+  transform: rotateY(180deg);
+}
+
+.customShapeDividerBottom1642607723 .shape-fill {
+  fill: #f6f6f6 !important;
+}
