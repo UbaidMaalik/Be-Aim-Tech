@@ -4,6 +4,7 @@ import Company from "../components/Company";
 import Products from "../components/Products";
 import Shape from "../components/Shape";
 import Slider from "../components/Slider";
+import Team from "../components/Team";
 import Testimonials from "../components/Testimonials";
 import styles from "../styles/Home.module.css";
 
@@ -19,7 +20,8 @@ export default function Home() {
       <Products />
       <Clients />
       <Testimonials />
-      <Company />
+      {/* <Company /> */}
+      <Team />
     </>
   );
 }

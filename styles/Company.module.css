@@ -1,19 +1,15 @@
-.beAimCompany {
-  background: #ebe9e9;
-}
 .rightHand h2 {
   color: #000;
   font-weight: bold;
 }
 .rightHand {
-  padding-top: 5rem;
+  padding: 3rem 0;
 }
 .rightHand p {
-  color: #939191;
-  font-weight: 300;
-  font-size: 19px;
-  padding-top: 15px;
-  line-height: 35px;
+  color: #000000;
+  /* font-weight: 300; */
+  font-size: 18px;
+  line-height: 30px;
 }
 .leftHand {
   padding: 3em;

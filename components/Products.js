@@ -30,9 +30,8 @@ const Products = () => {
               <h4>SEE OUR</h4>
               {/* <h2>PRODUCTS</h2> */}
               <div className={ProductStyles.productsHeading}>
-                <span>PRODUCTS</span> <span>PRODUCTS</span>
+                <span>PRODUCTS</span>
               </div>
-              <div className={ProductStyles.verticleLine}></div>
             </div>
           </div>
           <div className={`row ${ProductStyles.productCardsGap}`}>

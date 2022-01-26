@@ -10,6 +10,15 @@
   font-size: 20px;
   margin-bottom: 0;
 }
+.productsHeading span::before,
+.productsHeading span::after {
+  display: inline-block;
+  content: "";
+  border-top: 0.3rem solid #fdce4c;
+  width: 4rem;
+  margin: -5px 1rem;
+  transform: translateY(-1rem);
+}
 .productHeading h2 {
   font-size: 40px;
   font-weight: bold;

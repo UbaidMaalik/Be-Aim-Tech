@@ -26,3 +26,7 @@
 .bottomBar {
   color: #000 !important;
 }
+.bottomBar a {
+  float: right;
+  text-decoration: none;
+}

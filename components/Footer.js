@@ -138,13 +138,15 @@ const Footer = () => {
         </div>
         {/* <!-- Copyright --> */}
         <div
-          className={`text-center p-4 ${FooterStyles.bottomBar}`}
+          className={` p-2 ${FooterStyles.bottomBar}`}
           style={{ backgroundColor: "#cfb022" }}
         >
-          © 2021 Copyright:{" "}
-          <a className="text-reset fw-bold" href="#">
-            BeAimTech.com
-          </a>
+          <div className="container">
+            © 2021 Copyright:{" "}
+            <a className="text-reset fw-bold" href="#">
+              Be Aim Tech
+            </a>
+          </div>
         </div>
         {/* <!-- Copyright --> */}
       </footer>

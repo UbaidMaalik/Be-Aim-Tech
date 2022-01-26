@@ -44,10 +44,62 @@
 .Navbar > .navToggle {
   display: none;
 }
-
+.desktopNav {
+  display: block;
+}
+.desktopNav a {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.desktopNav a:hover {
+  color: var(--primaryColor);
+  /* -webkit-text-stroke: 1px rgb(214, 214, 214); */
+}
+.mobNav {
+  display: none;
+}
+.hamburger {
+  display: none;
+}
 @media (max-width: 700px) {
+  .desktopNav {
+    display: none;
+  }
+  .mobNav {
+    display: block;
+    width: 100%;
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 9999 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-500px);
+    transition: 0.5s;
+  }
+  .mobNavOpacity {
+    transform: translateX(0px);
+  }
+  .mobNav a {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    color: #000 !important;
+    background: #fdce4c;
+  }
+  .hamburger {
+    position: relative;
+    z-index: 9999999;
+    display: block;
+    transform: rotate(-360deg);
+    background: #ffffff05;
+    border: 0;
+  }
   .Navbar > .navItems {
-    position: absolute;
+    /* position: absolute;
     top: 60px;
     display: flex;
     flex-direction: column;
@@ -56,10 +108,10 @@
     width: 100%;
     height: 100%;
     transform: translateX(-100%);
-    transition: all 0.45s;
+    transition: all 0.45s; */
   }
 
-  .Navbar > .navItems > a::before {
+  /* .Navbar > .navItems > a::before {
     background: transparent;
   }
 
@@ -117,5 +169,5 @@
 
   .navToggle.open > .bar::after {
     transform: rotate(-45deg) translate(26px, 26px);
-  }
+  } */
 }

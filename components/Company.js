@@ -7,9 +7,6 @@ const Company = () => {
       <div className={CompanyStyles.beAimCompany}>
         <div className="container">
           <div className="row">
-            {/* <div className={`col-12 col-sm-6 ${CompanyStyles.leftHand}`}>
-              <Image src="/images/company3.png" width="550px" height="450px" />
-            </div> */}
             <div className={`col-12 col-sm-12 ${CompanyStyles.rightHand}`}>
               <h2>Fastest Growing IT Company</h2>
               <p>
@@ -21,9 +18,6 @@ const Company = () => {
                 clients with a unique research-based process. Be Aim Tech is
                 spreading the best services in the industry of IT.
               </p>
-              {/* <div className={CompanyStyles.companyButton}>
-                <button className={CompanyStyles.btn1}>Our Portfolio</button>
-              </div> */}
             </div>
           </div>
         </div>
