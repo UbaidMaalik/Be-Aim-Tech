@@ -2,6 +2,38 @@ import TeamStyles from "../styles/Team.module.css";
 import Image from "next/image";
 
 const Team = () => {
+  const team = [
+    {
+      url: "babar.jpg",
+      name: "Babar Khan",
+      title: "CEO & Founder",
+    },
+    {
+      url: "siyab.jpg",
+      name: "Siyab Khan",
+      title: "Senior Developer",
+    },
+    {
+      url: "salman.jpg",
+      name: "Salman Khan",
+      title: "Graphics Designer",
+    },
+    {
+      url: "usman.jpg",
+      name: "Usman Khan",
+      title: "Full Stack Developer",
+    },
+    {
+      url: "ubaid.jpg",
+      name: "Ubaid Malik",
+      title: "Front-end Developer",
+    },
+    {
+      url: "nasir.jpg",
+      name: "Nasir Khan",
+      title: "Digital Marketer",
+    },
+  ];
   return (
     <>
       <div className={TeamStyles.Team}>
@@ -22,72 +54,23 @@ const Team = () => {
             </div>
             <div className={`col-12 col-sm-6 ${TeamStyles.teamPics}`}>
               <div className="row">
-                <div className={`col-4 col-sm-4 ${TeamStyles.teams}`}>
-                  <Image
-                    src="/images/babar.jpg"
-                    className={TeamStyles.Image}
-                    width="380px"
-                    height="392px"
-                  />
-                  <div className={TeamStyles.overlay}>
-                    <h3>Babar Khan</h3>
-                    <p>CEO & Founder</p>
-                    {/* <button className={TeamStyles.btn1}>View Product</button> */}
+                {team.map((item, index) => (
+                  <div
+                    className={`col-4 col-sm-4 ${TeamStyles.teams}`}
+                    key={index}
+                  >
+                    <Image
+                      src={`/images/${item.url}`}
+                      className={TeamStyles.Image}
+                      width="380px"
+                      height="392px"
+                    />
+                    <div className={TeamStyles.overlay}>
+                      <h3>{item.name}</h3>
+                      <p>{item.title}</p>
+                    </div>
                   </div>
-                </div>
-                <div className={`col-4 col-sm-4 ${TeamStyles.teams}`}>
-                  <Image
-                    src="/images/siyab.jpg"
-                    className={TeamStyles.Image}
-                    width="380px"
-                    height="392px"
-                  />
-                  <div className={TeamStyles.overlay}>
-                    <h3>Siyab Khan</h3>
-                    <p>Senior Developer</p>
-                    {/* <button className={TeamStyles.btn1}>View Product</button> */}
-                  </div>
-                </div>
-                <div className={`col-4 col-sm-4 ${TeamStyles.teams}`}>
-                  <Image
-                    src="/images/salman.jpg"
-                    className={TeamStyles.Image}
-                    width="380px"
-                    height="392px"
-                  />
-                  <div className={TeamStyles.overlay}>
-                    <h3>Salman Khan</h3>
-                    <p>Graphics Designer</p>
-                    {/* <button className={TeamStyles.btn1}>View Product</button> */}
-                  </div>
-                </div>
-                <div className={`col-4 col-sm-4 ${TeamStyles.teams}`}>
-                  <Image
-                    src="/images/usman.jpg"
-                    className={TeamStyles.Image}
-                    width="380px"
-                    height="392px"
-                  />
-                  <div className={TeamStyles.overlay}>
-                    <h3>Usman Khan</h3>
-                    <p>Full Stack Developer</p>
-                    {/* <button className={TeamStyles.btn1}>View Product</button> */}
-                  </div>
-                </div>
-                <div className={`col-4 col-sm-4 ${TeamStyles.teams}`}>
-                  <Image
-                    src="/images/ubaid.jpg"
-                    className={TeamStyles.Image}
-                    width="380px"
-                    height="392px"
-                  />
-                  <div className={TeamStyles.overlay}>
-                    <h3>Ubaid Maalik</h3>
-                    <p>Front-end Developer</p>
-                    {/* <button className={TeamStyles.btn1}>View Product</button> */}
-                  </div>
-                </div>
-                <div className={`col-4 col-sm-4 ${TeamStyles.teams}`}></div>
+                ))}
               </div>
             </div>
           </div>

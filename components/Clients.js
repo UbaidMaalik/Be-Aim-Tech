@@ -79,8 +79,8 @@ const Clients = () => {
           </div>
           <div className={`${ClientStyles.clientCarousel}`}>
             <Slider {...settings}>
-              {dataItem.map((item) => (
-                <div className={ClientStyles.Item}>
+              {dataItem.map((item, index) => (
+                <div className={ClientStyles.Item} key={index}>
                   <Image
                     className="img-fluid w-100"
                     src={`/images/${item.img}`}

@@ -1,6 +1,14 @@
 import TestiStyles from "../styles/Testimonials.module.css";
 import Slider from "react-slick";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const Testimonials = () => {
   const dataItem = [
@@ -43,7 +51,6 @@ const Testimonials = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // arrows: true,
     responsive: [
       {
         breakpoint: 1200,
@@ -78,7 +85,7 @@ const Testimonials = () => {
   };
   return (
     <>
-      <div className={TestiStyles.beAimTestimonials}>
+      {/* <div className={TestiStyles.beAimTestimonials}>
         <div className="container">
           <div className="row">
             <div className={`col-12 col-sm-12 ${TestiStyles.testiHeading}`}>
@@ -103,6 +110,44 @@ const Testimonials = () => {
                 </div>
               ))}
             </Slider>
+          </div>
+        </div>
+      </div> */}
+      {/* swiper */}
+      <div className={TestiStyles.beAimTestimonials}>
+        <div className="container">
+          <div className="row">
+            <div className={`col-12 col-sm-12 ${TestiStyles.testiHeading}`}>
+              <span>TESTIMONIALS</span>
+              <p>What Clients Say About Us</p>
+            </div>
+          </div>
+          <div className={`${TestiStyles.testiCarousel}`}>
+            <Swiper
+              modules={[Navigation, Pagination, Scrollbar, A11y]}
+              spaceBetween={50}
+              slidesPerView={3}
+              navigation
+              pagination={{ clickable: true }}
+              scrollbar={{ draggable: true }}
+              onSlideChange={() => console.log("slide change")}
+              onSwiper={(swiper) => console.log(swiper)}
+            >
+              {dataItem.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    className="img-fluid w-100"
+                    src={`/images/${item.img}`}
+                    alt=""
+                    width="80px"
+                    height="80px"
+                  />
+                  <p>{item.text}</p>
+                  <h3>{item.auther}</h3>
+                  <h4>{item.position}</h4>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>

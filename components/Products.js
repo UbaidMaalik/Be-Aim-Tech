@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import ProductStyles from "../styles/Products.module.css";
 const Products = () => {
   const data = [
@@ -28,17 +28,17 @@ const Products = () => {
           <div className="row">
             <div className={`col-12 col-sm-12 ${ProductStyles.productHeading}`}>
               <h4>SEE OUR</h4>
-              {/* <h2>PRODUCTS</h2> */}
               <div className={ProductStyles.productsHeading}>
                 <span>PRODUCTS</span>
               </div>
             </div>
           </div>
           <div className={`row ${ProductStyles.productCardsGap}`}>
-            {data.map((item) => (
+            {data.map((item, index) => (
               <div
                 className={`col-12 col-sm-4 ${ProductStyles.productCard}`}
                 style={{ backgroundImage: `url(/images/${item.img})` }}
+                key={index}
               >
                 <div className={ProductStyles.overlay}>
                   <h3>Xplode</h3>
@@ -50,14 +50,8 @@ const Products = () => {
               </div>
             ))}
           </div>
-          {/* <div className="clearfix"></div>
-          <a href="javascript:;" className="btn-orange">
-            View More
-          </a> */}
         </div>
       </div>
-      {/* </div> */}
-      {/* </div> */}
     </>
   );
 };

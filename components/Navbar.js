@@ -40,15 +40,17 @@ const Navbar = () => {
           <div className={NavStyles.Navbar}>
             <span className={NavStyles.navLogo}>
               <Image
-                src="/images/tagline.png"
+                src="/images/logo.png"
                 alt="logo"
                 width="350px"
                 height="80px"
               />
             </span>
             <div className={`${NavStyles.navItems} ${NavStyles.desktopNav}`}>
-              {links.map((item) => (
-                <a href={item.url}>{item.name}</a>
+              {links.map((item, index) => (
+                <a href={item.url} key={index}>
+                  {item.name}
+                </a>
               ))}
             </div>
             <div
@@ -56,8 +58,10 @@ const Navbar = () => {
                 isOpen && NavStyles.mobNavOpacity
               }`}
             >
-              {links.map((item) => (
-                <a href={item.url}>{item.name}</a>
+              {links.map((item, index) => (
+                <a href={item.url} key={index}>
+                  {item.name}
+                </a>
               ))}
             </div>
 

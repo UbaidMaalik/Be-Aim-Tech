@@ -1,0 +1,39 @@
+.formControl:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #212529;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(253 206 76);
+}
+.formControl {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid rgb(201, 200, 200);
+}
+.map {
+  /* padding: 3em 0; */
+}
+.title h2 {
+  font-size: 45px;
+  font-weight: bold;
+  color: #000;
+  padding-top: 1em;
+}
+.button {
+  float: right;
+  background: #fdce4c;
+  border: 0;
+  color: #000;
+}
+.button:focus {
+  box-shadow: 0 0 0 0.25rem rgb(253 206 76);
+}
+.button:hover {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+.form {
+  padding: 0 2em 0 0;
+}

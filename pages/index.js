@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Clients from "../components/Clients";
 import Company from "../components/Company";
+import Map from "../components/Map";
 import Products from "../components/Products";
 import Shape from "../components/Shape";
 import Slider from "../components/Slider";
@@ -20,8 +21,8 @@ export default function Home() {
       <Products />
       <Clients />
       <Testimonials />
-      {/* <Company /> */}
       <Team />
+      <Map />
     </>
   );
 }
